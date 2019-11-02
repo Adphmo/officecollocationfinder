@@ -1,0 +1,34 @@
+"""
+An attempt at a code (in principle) which (i) takes a text, (ii) identifies a series of collocations which are related to 
+business or being in an office, and (iii) returns a definition of said collocation for an English-language
+learner to find in the text.
+
+ocolls = office collocations
+
+ocollsdefs = office collocations definitions. 
+
+This code does not work. There is invalid syntax after the below line:
+
+    for any(x in newstr for x in (x,y) in ocollsdefs)
+    
+Any help would be appreciated!
+    
+"""
+
+str = input("Enter your text here:")
+
+newstr = str.lower()
+
+ocolls = ["take minutes at a meeting", "meet a deadline", "close a deal"]
+
+ocollsdefs = [("take minutes at a meeting", "to listen and write notes in a meeting"),
+           ("meet a deadline", "to do something before it's too late"),
+           ("close a deal", "to agree a contract or exchange with another person or company")
+           ]
+
+if any(x in newstr for x in ocolls) == True:
+    print("Can you find the below collocations?")
+    for any(x in newstr for x in (x,y) in ocollsdefs)
+        print (y in ocollsdefs)
+else:
+    print("Nope. No useful collocations here.")
