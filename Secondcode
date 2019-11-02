@@ -1,0 +1,12 @@
+ocolls = {"take minutes at a meeting": "to listen and write notes in a meeting",
+           "meet a deadline": "to do something before it's too late",
+           "close a deal": "to agree a contract or exchange with another person or company"
+           }
+
+str = input("Enter your text here:")
+
+newstr = str.lower()
+
+for key in ocolls:
+    if key in newstr:
+        print("Can you find collocations in the text for the below definitions?:\n\n" + (ocolls[key]))
